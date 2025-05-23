@@ -1,0 +1,114 @@
+{
+  "project_info": {
+    "project_number": "296733976459",
+    "firebase_url": "https://samsung-activation-default-rtdb.firebaseio.com",
+    "project_id": "samsung-activation",
+    "storage_bucket": "samsung-activation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296733976459:android:64641df20384d7bb6a318e",
+        "android_client_info": {
+          "package_name": "com.cheilmeadigital.spinwheelpromoter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296733976459-44rdv2koun19nm5qq7d2lnma4se342gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjy4UGAR2BdLDDNFsDK5ldDLrJffQQdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296733976459-44rdv2koun19nm5qq7d2lnma4se342gi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296733976459:android:65d36ebe09a8cecd6a318e",
+        "android_client_info": {
+          "package_name": "com.cheilmeadigital.spinwheeltv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296733976459-44rdv2koun19nm5qq7d2lnma4se342gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjy4UGAR2BdLDDNFsDK5ldDLrJffQQdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296733976459-44rdv2koun19nm5qq7d2lnma4se342gi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296733976459:android:26ee38fcce5b9d5c6a318e",
+        "android_client_info": {
+          "package_name": "com.cheilmeadigital.vendomedash"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296733976459-k18ikuonpa9m14k2nnserqaq8c7n8vrp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cheilmeadigital.vendomedash",
+            "certificate_hash": "2249e211895dabe56ddae64b42855652c2629869"
+          }
+        },
+        {
+          "client_id": "296733976459-rrn2d1tauuj5hq6p79r7c6jo63o1o18m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cheilmeadigital.vendomedash",
+            "certificate_hash": "880d66d2cae7f4d8db4a64b6e0f4da5872ea2563"
+          }
+        },
+        {
+          "client_id": "296733976459-44rdv2koun19nm5qq7d2lnma4se342gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjy4UGAR2BdLDDNFsDK5ldDLrJffQQdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296733976459-44rdv2koun19nm5qq7d2lnma4se342gi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
