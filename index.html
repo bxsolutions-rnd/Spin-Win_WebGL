@@ -8,16 +8,16 @@
 
   <!-- Define global JS functions for input handling -->
   <script>
-    // Focuses the input box to open the keyboard
-    window.focusInput = function () {
-      var input = document.getElementById('mobileInput');
-      if (input) {
-        input.style.opacity = '1'; // If you want to show it
-        input.focus();
-      } else {
-        console.warn("Input element not found");
-      }
-    };
+    // // Focuses the input box to open the keyboard
+    // window.focusInput = function () {
+    //   var input = document.getElementById('mobileInput');
+    //   if (input) {
+    //     input.style.opacity = '1'; // If you want to show it
+    //     input.focus();
+    //   } else {
+    //     console.warn("Input element not found");
+    //   }
+    // };
 
     // Get value from the input box and send to Unity
     window.sendInputToUnity = function () {
@@ -51,7 +51,6 @@
   <!-- Your Unity build scripts -->
   <script src="Build/spinwin_webgl.loader.js"></script>
   <script>
-
     if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
       // Mobile device style: fill the whole browser client area with the game canvas:
       var meta = document.createElement('meta');
@@ -72,15 +71,13 @@
       dataUrl: "Build/spinwin_webgl.data.br",
       frameworkUrl: "Build/spinwin_webgl.framework.js.br",
       codeUrl: "Build/spinwin_webgl.wasm.br",
-      // streamingAssetsUrl: "StreamingAssets",
+      streamingAssetsUrl: "StreamingAssets",
       companyName: "Cheil MEA FZ LLC",
       productName: "SummerPromo",
       productVersion: "1.0.2-20250130-REL",
       // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
       // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
     });
-
-
   </script>
 </body>
 
