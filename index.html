@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | SummerPromo</title>
+
+  <!-- Define global JS functions for input handling -->
+  <script>
+    // Focuses the input box to open the keyboard
+    window.focusInput = function () {
+      var input = document.getElementById('mobileInput');
+      if (input) {
+        input.style.opacity = '1'; // If you want to show it
+        input.focus();
+      } else {
+        console.warn("Input element not found");
+      }
+    };
+
+    // Get value from the input box and send to Unity
+    window.sendInputToUnity = function () {
+      var input = document.getElementById('mobileInput');
+      if (input) {
+        var text = input.value;
+        // Ensure unityInstance is available
+        if (typeof unityInstance !== 'undefined' && unityInstance.SendMessage) {
+          // Replace 'InputManager' with your GameObject's name
+          unityInstance.SendMessage('InputManager', 'OnReceiveInput', text);
+        } else {
+          console.warn("unityInstance not available");
+        }
+        input.value = '';
+        input.style.opacity = '0';
+      }
+    };
+  </script>
+</head>
+
+<body style="text-align: center; padding: 0; border: 0; margin: 0;">
+
+  <canvas id="unity-canvas" width=1080 height=1920 tabindex="-1"
+    style="width: 1080px; height: 1920px; background: #231F20"></canvas>
+
+  <!-- Hidden input for mobile keyboard -->
+  <input type="text" id="mobileInput"
+    style="position:absolute; bottom:10%; left:50%; transform:translateX(-50%); width:80%; height:30px; font-size:16px;" />
+
+
+  <!-- Your Unity build scripts -->
+  <script src="Build/spinwin_webgl.loader.js"></script>
+  <script>
+
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      // Mobile device style: fill the whole browser client area with the game canvas:
+      var meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      document.getElementsByTagName('head')[0].appendChild(meta);
+
+      var canvas = document.querySelector("#unity-canvas");
+      canvas.style.width = "100%";
+      canvas.style.height = "100%";
+      canvas.style.position = "fixed";
+
+      document.body.style.textAlign = "left";
+    }
+
+    // Initialize Unity, using your actual build path
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: "Build/spinwin_webgl.data.br",
+      frameworkUrl: "Build/spinwin_webgl.framework.js.br",
+      // codeUrl: "Build/spinwin_webgl.wasm.br",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Cheil MEA FZ LLC",
+      productName: "SummerPromo",
+      productVersion: "1.0.2-20250130-REL",
+      // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+      // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+    });
+
+
+  </script>
+</body>
+
+</html>
